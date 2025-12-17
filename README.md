@@ -1,16 +1,37 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Frontend Article App
 
-Currently, two official plugins are available:
+Frontend untuk menampilkan dan mengelola artikel (Published / Draft / Trashed), tambah artikel baru, edit, dan preview.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
+- Node.js 18+
 
-## React Compiler
+## Install
+```
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run (Development)
+```
+npm run dev
+```
+Buka: http://localhost:5173
 
-## Expanding the ESLint configuration
+## Build
+```
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Environment
+Buat file `.env`:
+
+```
+VITE_API_BASE_URL=http://localhost:8080
+```
+
+Di code akses dengan:
+`import.meta.env.VITE_API_BASE_URL` (env di Vite harus prefix `VITE_`). [web:508]
+
+## API Base URL
+Pastikan backend jalan di `http://localhost:8080` atau lainnya sesuai dengan API berjalan.
